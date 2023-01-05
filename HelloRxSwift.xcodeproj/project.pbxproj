@@ -25,6 +25,7 @@
 		335EFC7B2966535300B0E1E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		335EFC7E2966535300B0E1E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		335EFC802966535300B0E1E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338C0256296655EE00D2396F /* RxSwiftPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5595663E95217888EE3B3C7F /* Pods_HelloRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		719ABADF6205F6511A567367 /* Pods-HelloRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-HelloRxSwift/Pods-HelloRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		EFA9D41E63512C2C8555C574 /* Pods-HelloRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRxSwift.release.xcconfig"; path = "Target Support Files/Pods-HelloRxSwift/Pods-HelloRxSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		335EFC712966535000B0E1E2 /* HelloRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				338C0256296655EE00D2396F /* RxSwiftPlayground.playground */,
 				335EFC722966535000B0E1E2 /* AppDelegate.swift */,
 				335EFC742966535000B0E1E2 /* SceneDelegate.swift */,
 				335EFC762966535000B0E1E2 /* ViewController.swift */,
@@ -88,7 +90,6 @@
 				719ABADF6205F6511A567367 /* Pods-HelloRxSwift.debug.xcconfig */,
 				EFA9D41E63512C2C8555C574 /* Pods-HelloRxSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
