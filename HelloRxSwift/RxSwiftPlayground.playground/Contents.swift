@@ -2,18 +2,18 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+let strikes = PublishSubject<String>()
+
 let disposeBag = DisposeBag()
 
-let relay = BehaviorRelay(value: ["Item 1"])
+strikes
+    .ignoreElements()
+    .subscribe { _ in
+        print("[Subscription is called]")
+    }.disposed(by: disposeBag)
 
-var value = relay.value
-value.append("Item 2")
-value.append("Item 3")
+strikes.onNext("A")
+strikes.onNext("B")
+strikes.onNext("C")
 
-relay.accept(value)
-//relay.accept(relay.value + ["Item 2"])
-
-relay.asObservable()
-    .subscribe {
-        print($0)
-    }
+strikes.onCompleted()
