@@ -2,15 +2,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-let strikes = PublishSubject<String>()
 let disposeBag = DisposeBag()
 
-strikes
-    .elementAt(2)
-    .subscribe(onNext: { _ in
-        print("You are out!")
+Observable.of(1,2,3,4,5,6,7)
+    .filter { $0 % 2 == 0 }
+    .subscribe(onNext: {
+        print($0)
     }).disposed(by: disposeBag)
-
-strikes.onNext("X")
-strikes.onNext("X")
-strikes.onNext("X")
