@@ -7,15 +7,18 @@ let disposeBag = DisposeBag()
 let left = PublishSubject<Int>()
 let right = PublishSubject<Int>()
 
-let source = Observable.of(left.asObservable(),right.asObserver())
+let observable = Observable.combineLatest(left,right,resultSelector:{
+    lastLeft, lastRight in
+    "\(lastLeft) \(lastRight)"
+})
 
-let observable = source.merge()
-observable.subscribe(onNext: {
-    print($0)
-}).disposed(by: disposeBag)
+let disposable = observable.subscribe(onNext: { value in
+    print(value)
+})
 
-left.onNext(5)
-left.onNext(3)
-right.onNext(2)
+left.onNext(45)
+left.onNext(50)
 right.onNext(1)
-left.onNext(92)
+left.onNext(30)
+right.onNext(99)
+right.onNext(2)
